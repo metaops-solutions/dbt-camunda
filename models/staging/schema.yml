@@ -1,0 +1,47 @@
+version: 1
+
+sources:
+  - name: public
+    tables:
+      - name: act_hi_procinst
+        description: "Process instances"
+        columns:
+          - name: id_
+            description: "The unique identifier of the process instance"
+            tests:
+              - unique
+          - name: business_key_
+            description: "The business key of the process instance"
+      - name: act_hi_actinst
+        description: "Activity instances"
+        columns:
+          - name: id_
+            description: "The unique identifier of the activity instance"
+            tests:
+              - unique
+          - name: proc_inst_id_
+            description: "The unique identifier of the process instance"
+          - name: act_id_
+            description: "The unique identifier of the activity"
+          - name: act_name_
+            description: "The name of the activity"
+          - name: act_type_
+            description: "The type of the activity"
+          - name: assignee_
+            description: "The assignee of the activity"
+          - name: start_time_
+            description: "The start time of the activity"
+          - name: end_time_
+            description: "The end time of the activity"
+          - name: duration_
+            description: "The duration of the activity"
+          - name: tenant_id_
+            description: "The tenant id of the activity"
+
+
+#models:
+#  - name: stg_process_instances
+#    columns:
+#      - name: process_instance_id
+#        tests:
+#          - unique
