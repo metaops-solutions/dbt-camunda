@@ -11,7 +11,7 @@ with
 pivot_and_split_processes_to_user_activities_open_tasks_grain as (
 
 -- List current activities
-select pi.business_key, ai.activity_name ,ai.start_time, ai.end_time, ai.duration, ai.sequence_counter
+select pi.business_key, ai.activity_name ,ai.start_time, ai.sequence_counter
 from processes pi, activities ai
 where pi.root_process_instance_id = ai.root_process_instance_id
   and ai.end_time IS NULL
