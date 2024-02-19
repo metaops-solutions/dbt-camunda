@@ -1,0 +1,22 @@
+SELECT
+    id,
+    decisionDefinitionId,
+    decisionDefinitionKey,
+    decisionDefinitionName,
+    evaluationTime,
+    removalTime,
+    processDefinitionId,
+    processDefinitionKey,
+    processInstanceId,
+    caseDefinitionId,
+    caseDefinitionKey,
+    caseInstanceId,
+    activityId,
+    activityInstanceId,
+    tenantId,
+    userId,
+    rootDecisionInstanceId,
+    rootProcessInstanceId,
+    decisionRequirementsDefinitionId,
+    decisionRequirementsDefinitionKey
+FROM {{ ref('stg_decision_instance') }} as decisions
