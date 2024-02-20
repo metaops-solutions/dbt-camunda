@@ -16,7 +16,7 @@ Include in your `packages.yml`
 ```yaml
 packages:
   - package: metaops-solutions/dbt-camunda
-    version: ["0.0.3"]
+    version: ["0.0.4"]
 ```
 
 ## Configuration
