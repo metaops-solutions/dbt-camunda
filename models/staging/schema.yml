@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: camunda_history
-    schema: public
+    schema: "{{ var('src_schema', 'public') }}"
     tables:
       - name: activity_instance_startedafter
         description: "Activity instances started but not finished up to the last sync time"

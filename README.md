@@ -16,13 +16,14 @@ Include in your `packages.yml`
 ```yaml
 packages:
   - package: metaops-solutions/dbt-camunda
-    version: ["0.0.4"]
+    version: ["0.0.5"]
 ```
 
 ## Configuration
 
 ### Source Data Location
-By default, this package will look for your source Data camunda_history created in your Database/Warehouse using Airbyte camunda_history connector.
+Configure the schema for the source data via project variable src_schema which is set to "public" by default
+Package expects Data to be present as it was ingested with camunda_history Airbyte connector and schema for this connector defined in models/staging/schema.yml
 
 ### Using the starter project
 
